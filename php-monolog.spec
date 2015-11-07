@@ -18,14 +18,10 @@ Group:		Development/Languages/PHP
 Source0:	https://github.com/Seldaek/monolog/archive/%{version}/%{pkgname}-%{version}.tar.gz
 # Source0-md5:	85b0bbd8541cbf8b09faf18fd29934df
 URL:		https://github.com/Seldaek/monolog
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.654
 %if %{with tests}
-## composer.json
 BuildRequires:	php(core) >= %{php_min_version}
-BuildRequires:	php-psr-Log < %{psrlog_max_ver}
-BuildRequires:	php-psr-Log >= %{psrlog_min_ver}
-BuildRequires:	phpunit
-## phpcompatinfo (computed from version 1.17.2)
 BuildRequires:	php(curl)
 BuildRequires:	php(date)
 BuildRequires:	php(filter)
@@ -38,25 +34,25 @@ BuildRequires:	php(reflection)
 BuildRequires:	php(sockets)
 BuildRequires:	php(spl)
 BuildRequires:	php(xml)
-## Autoloader
+BuildRequires:	php-psr-Log < %{psrlog_max_ver}
+BuildRequires:	php-psr-Log >= %{psrlog_min_ver}
 BuildRequires:	php-symfony2-ClassLoader
+BuildRequires:	phpunit
 %endif
-# composer.json
 Requires:	php(core) >= %{php_min_version}
 Requires:	php-psr-Log < %{psrlog_max_ver}
 Requires:	php-psr-Log >= %{psrlog_min_ver}
-# phpcompatinfo (computed from version 1.17.2)
-Requires:	php(curl)
-Requires:	php(date)
-Requires:	php(filter)
-Requires:	php(hash)
-Requires:	php(json)
-Requires:	php(mbstring)
-Requires:	php(openssl)
-Requires:	php(pcre)
-Requires:	php(sockets)
-Requires:	php(spl)
-Requires:	php(xml)
+Suggests:	php(curl)
+Suggests:	php(date)
+Suggests:	php(filter)
+Suggests:	php(hash)
+Suggests:	php(json)
+Suggests:	php(mbstring)
+Suggests:	php(openssl)
+Suggests:	php(pcre)
+Suggests:	php(sockets)
+Suggests:	php(spl)
+Suggests:	php(xml)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
