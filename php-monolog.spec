@@ -11,12 +11,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Sends your logs to files, sockets, inboxes, databases and various web services
 Name:		php-%{pkgname}
-Version:	1.17.2
+Version:	1.19.0
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/Seldaek/monolog/archive/%{version}/%{pkgname}-%{version}.tar.gz
-# Source0-md5:	85b0bbd8541cbf8b09faf18fd29934df
+# Source0-md5:	05c338cde7a1525d2093e6df5b3bbe21
 URL:		https://github.com/Seldaek/monolog
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.654
