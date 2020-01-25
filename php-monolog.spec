@@ -8,7 +8,6 @@
 
 %define		pkgname monolog
 %define		php_min_version 5.3.0
-%include	/usr/lib/rpm/macros.php
 Summary:	Sends your logs to files, sockets, inboxes, databases and various web services
 Name:		php-%{pkgname}
 Version:	1.22.0
